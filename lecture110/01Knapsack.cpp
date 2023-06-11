@@ -24,7 +24,10 @@ int solve(vector<int> &weight, vector<int> &value, int index, int capacity,vecto
 	return dp[index][capacity];
 }
 
+
 int solveTab(vector<int> &weight, vector<int> &value, int n, int capacity){
+
+	
 	vector<vector<int>>dp(n,vector<int>(capacity+1,0));
 
 
@@ -36,7 +39,7 @@ int solveTab(vector<int> &weight, vector<int> &value, int n, int capacity){
 			dp[0][w]=0;
 		}
 	}
-	for(int index =0; index<n; index++){
+	for(int index =1; index<n; index++){
 		for(int w = 0; w<=capacity;w++){
 			int include = 0;
 	        if(weight[index]<=w){
@@ -59,3 +62,5 @@ int knapsack(vector<int> weight, vector<int> value, int n, int maxWeight)
 	// vector<vector<int>>dp(n,vector<int>(maxWeight+1,-1));
 	return solveTab(weight,value,n,maxWeight);
 }
+
+
