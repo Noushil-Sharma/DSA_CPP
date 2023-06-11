@@ -18,6 +18,8 @@ long long int solve(int n,vector<long long int>&dp){
 
 long long int solveTab(int n){
     vector<long long int>dp(n+1,0);
+
+    
     
     dp[1]=0;
     dp[2]=1;
