@@ -6,6 +6,8 @@ using namespace std;
         int mid = s + (e-s)/2;
         int ans;
 
+        
+
         while(s<=e){
             if (arr[mid]==key){
                 ans = mid;
